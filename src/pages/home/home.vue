@@ -21,7 +21,7 @@
             }
         },
         created() {
-            this.getBlogData()
+            // this.getBlogData()
         },
         methods: {
             getBlogData() {
@@ -37,7 +37,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
     .home-title {
         font-size: 38px;
         padding: 30px 10px;
@@ -69,4 +69,5 @@
     .author:hover {
         cursor: pointer
     }
+
 </style>
