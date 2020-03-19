@@ -11,19 +11,38 @@
                 <el-input v-model="password" placeholder="请输入内容"></el-input>
             </div>
             <div class="btn">
-                <el-button type="primary">登录</el-button>
+                <el-button type="primary" @click="onLogin">登录</el-button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+    import {login} from '@/api/blog'
+    import jump from '@/util/jump'
+
     export default {
         name: "login",
         data(){
             return{
                 username: '',
                 password: ''
+            }
+        },
+        methods:{
+            onLogin(){
+                const data = {
+                    username: this.username,
+                    password: this.password
+                }
+                login(data).then(res => {
+                    if (res.code === 0) {
+                        jump.goHome(this)
+                        return
+                    }
+                    this.$message.error(res.message)
+                })
             }
         }
     }

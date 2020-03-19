@@ -13,7 +13,7 @@ const routes = [
         }
     },
     {
-        path: '/blog',
+        path: '/',
         redirect: '/blog/index',
         component: () => import('@/pages/pages'),
         meta: {

@@ -21,7 +21,7 @@
             }
         },
         created() {
-            // this.getBlogData()
+            this.getBlogData()
         },
         methods: {
             getBlogData() {

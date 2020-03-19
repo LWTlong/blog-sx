@@ -45,5 +45,6 @@
         font-size: 18px;
         line-height: 1.6;
         color: #666;
+        white-space: pre;
     }
 </style>

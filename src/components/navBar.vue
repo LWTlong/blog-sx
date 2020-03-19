@@ -5,7 +5,7 @@
              @click="goTo(item)"
              class="nav-item"
              :class="[nowPath == item.path ? 'nav-item-active' : '']"
-        >{{item.name}}{{item.path}}
+        >{{item.name}}
         </div>
     </div>
 </template>
